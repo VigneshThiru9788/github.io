@@ -58,7 +58,7 @@ nav{
 .hero-blob3{position:absolute;top:30%;left:40%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(240,20,106,0.07) 0%,transparent 70%);pointer-events:none}
 .hero-inner{max-width:1100px;width:100%;display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center;position:relative;z-index:1}
 
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--purple-light);border:1.5px solid var(--purple-mid);border-radius:100px;padding:7px 18px;font-size:0.78rem;font-weight:700;color:var(--purple);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:1.5rem;animation:fadeUp 0.6s ease both}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--purple-light);border:1.5px solid var(--purple-mid);border-radius:100px;padding:7px 18px;font-size:0.78rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;color:var(--purple);margin-bottom:1.5rem}
 .hero-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)}}
 .hero-name{font-family:'Fraunces',serif;font-size:clamp(3rem,5.5vw,5rem);font-weight:700;line-height:1.0;letter-spacing:-0.02em;margin-bottom:0.75rem;animation:fadeUp 0.6s 0.1s ease both}
@@ -67,9 +67,9 @@ nav{
 .hero-role-dot{width:5px;height:5px;border-radius:50%;background:var(--pink);flex-shrink:0}
 .hero-desc{color:var(--muted);font-size:0.97rem;line-height:1.85;max-width:480px;animation:fadeUp 0.6s 0.2s ease both}
 .hero-cta{display:flex;gap:1rem;margin-top:2.25rem;flex-wrap:wrap;animation:fadeUp 0.6s 0.3s ease both}
-.btn-primary{background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;border:none;border-radius:12px;padding:13px 32px;font-family:inherit;font-size:0.9rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 8px 24px rgba(108,59,255,0.3);transition:transform 0.2s,box-shadow 0.2s}
+.btn-primary{background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;border:none;border-radius:12px;padding:13px 32px;font-family:inherit;font-size:0.9rem;font-weight:700;cursor:pointer;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s}
 .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(108,59,255,0.4)}
-.btn-outline{background:#fff;color:var(--purple);border:2px solid var(--purple-mid);border-radius:12px;padding:13px 32px;font-family:inherit;font-size:0.9rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s,border-color 0.2s,transform 0.2s}
+.btn-outline{background:#fff;color:var(--purple);border:2px solid var(--purple-mid);border-radius:12px;padding:13px 32px;font-family:inherit;font-size:0.9rem;font-weight:700;cursor:pointer;text-decoration:none;transition:background 0.2s,transform 0.2s}
 .btn-outline:hover{background:var(--purple-light);border-color:var(--purple);transform:translateY(-3px)}
 
 .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;animation:fadeUp 0.6s 0.4s ease both}
@@ -106,12 +106,12 @@ hr.divider{border:none;border-top:1.5px solid var(--border);max-width:1100px;mar
 .exp-role{font-weight:800;font-size:1.1rem;color:var(--text)}
 .exp-company{color:var(--purple);font-weight:700;font-size:0.9rem;margin-bottom:0.2rem}
 .exp-project-tag{display:inline-block;background:var(--teal-light);color:var(--teal);border-radius:6px;padding:3px 12px;font-size:0.75rem;font-weight:700;margin-bottom:1rem;margin-top:0.2rem}
-.exp-period{background:linear-gradient(135deg,var(--purple-light),var(--pink-light));border:1.5px solid var(--purple-mid);border-radius:100px;padding:5px 16px;font-size:0.78rem;font-weight:700;color:var(--purple);white-space:nowrap}
+.exp-period{background:linear-gradient(135deg,var(--purple-light),var(--pink-light));border:1.5px solid var(--purple-mid);border-radius:100px;padding:5px 16px;font-size:0.78rem;font-weight:700;color:var(--purple)}
 .exp-bullets{list-style:none}
 .exp-bullets li{position:relative;padding-left:1.5rem;font-size:0.9rem;color:var(--muted);line-height:1.75;margin-bottom:0.5rem}
 .exp-bullets li::before{content:'▸';position:absolute;left:0;color:var(--purple);font-size:0.85rem;top:2px}
 .exp-stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.25rem;padding-top:1.25rem;border-top:1.5px dashed var(--border)}
-.tech-tag{background:var(--purple-light);border:1px solid var(--purple-mid);border-radius:8px;padding:4px 14px;font-size:0.78rem;font-weight:600;color:var(--purple);transition:background 0.2s,transform 0.15s,color 0.15s;cursor:default}
+.tech-tag{background:var(--purple-light);border:1px solid var(--purple-mid);border-radius:8px;padding:4px 14px;font-size:0.78rem;font-weight:600;color:var(--purple);transition:background 0.2s,transform 0.2s}
 .tech-tag:hover{background:var(--purple);color:#fff;transform:scale(1.05)}
 .tech-tag.teal{background:var(--teal-light);border-color:#86efda;color:var(--teal)}
 .tech-tag.teal:hover{background:var(--teal);color:#fff}
@@ -155,11 +155,11 @@ hr.divider{border:none;border-top:1.5px solid var(--border);max-width:1100px;mar
 .edu-school{color:var(--purple);font-size:0.88rem;font-weight:600;margin-bottom:0.25rem}
 .edu-year{font-size:0.8rem;color:var(--muted);font-weight:500}
 
-.contact-wrapper{background:linear-gradient(135deg,var(--purple-light) 0%,var(--pink-light) 100%);border:1.5px solid var(--purple-mid);border-radius:28px;padding:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.contact-wrapper{background:linear-gradient(135deg,var(--purple-light) 0%,var(--pink-light) 100%);border:1.5px solid var(--purple-mid);border-radius:28px;padding:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
 .contact-lead{font-family:'Fraunces',serif;font-size:2rem;font-weight:700;line-height:1.2;margin-bottom:0.75rem}
 .contact-sub{color:var(--muted);font-size:0.95rem;line-height:1.8}
 .contact-links{display:flex;flex-direction:column;gap:1rem}
-.contact-link{display:flex;align-items:center;gap:1rem;background:#fff;border:1.5px solid var(--border2);border-radius:14px;padding:1rem 1.25rem;text-decoration:none;color:var(--text);transition:border-color 0.3s,transform 0.2s,box-shadow 0.3s}
+.contact-link{display:flex;align-items:center;gap:1rem;background:#fff;border:1.5px solid var(--border2);border-radius:14px;padding:1rem 1.25rem;text-decoration:none;color:var(--text);transition:border-color 0.2s,transform 0.2s,box-shadow 0.2s}
 .contact-link:hover{border-color:var(--purple);transform:translateX(8px);box-shadow:0 6px 20px rgba(108,59,255,0.12)}
 .clink-icon{width:42px;height:42px;border-radius:12px;background:var(--purple-light);display:grid;place-items:center;flex-shrink:0}
 .clink-text{font-weight:700;font-size:0.9rem}
@@ -211,7 +211,7 @@ footer span{color:rgba(255,255,255,0.85);font-weight:600}
         <span class="hero-role-dot"></span>
         Microservices
       </div>
-      <p class="hero-desc">9+ years building enterprise-grade backend systems in Banking & Trading. Specialising in microservices, RESTful APIs, and cloud integration for high-performance financial platforms.</p>
+      <p class="hero-desc">9+ years building enterprise-grade backend systems in Banking & Trading. Specialising in microservices, RESTful APIs, and cloud integration for high-performance financial systems.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn-primary">Get in Touch</a>
         <a href="#experience" class="btn-outline">View Experience</a>
@@ -257,7 +257,7 @@ footer span{color:rgba(255,255,255,0.85);font-weight:600}
         <li>Achieved 85%+ code coverage with JUnit, Mockito, and PowerMockito; conducted code reviews and mentored junior developers as Learning Development SPOC.</li>
       </ul>
       <div class="exp-stack">
-        <span class="tech-tag">Java 8</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">REST APIs</span><span class="tech-tag">Microservices</span><span class="tech-tag">Maven</span><span class="tech-tag">Gradle</span><span class="tech-tag">JUnit</span><span class="tech-tag teal">IBM MQ</span><span class="tech-tag teal">Oracle</span><span class="tech-tag teal">AWS</span>
+        <span class="tech-tag">Java 8</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">REST APIs</span><span class="tech-tag">Microservices</span><span class="tech-tag">Maven</span><span class="tech-tag">Oracle</span><span class="tech-tag">IBM MQ</span><span class="tech-tag">JUnit</span>
       </div>
     </div>
   </div>
@@ -282,7 +282,7 @@ footer span{color:rgba(255,255,255,0.85);font-weight:600}
         <li>Performed defect analysis and root cause identification, supporting pre-release and post-release activities for smooth production deployments.</li>
       </ul>
       <div class="exp-stack">
-        <span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">REST APIs</span><span class="tech-tag">JavaScript</span><span class="tech-tag">HTML5</span><span class="tech-tag teal">Jenkins</span><span class="tech-tag teal">SonarQube</span><span class="tech-tag teal">Linux</span>
+        <span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">REST APIs</span><span class="tech-tag">JavaScript</span><span class="tech-tag">HTML5</span><span class="tech-tag">Jenkins</span><span class="tech-tag">SonarQube</span>
       </div>
       <div class="exp-sub">
         <div class="exp-project-tag">Post Trading & Settlement</div>
@@ -292,7 +292,7 @@ footer span{color:rgba(255,255,255,0.85);font-weight:600}
           <li>Provided Unix production support, performing root cause analysis and resolution of critical production issues to ensure system stability.</li>
         </ul>
         <div class="exp-stack">
-          <span class="tech-tag">ESQL</span><span class="tech-tag">WebSphere MQ</span><span class="tech-tag">IIB</span><span class="tech-tag teal">Unix</span><span class="tech-tag teal">Bitbucket</span><span class="tech-tag teal">JIRA</span>
+          <span class="tech-tag">ESQL</span><span class="tech-tag">WebSphere MQ</span><span class="tech-tag">IIB</span><span class="tech-tag teal">Unix</span><span class="tech-tag teal">Bitbucket</span>
         </div>
       </div>
     </div>
@@ -311,17 +311,17 @@ footer span{color:rgba(255,255,255,0.85);font-weight:600}
     <div class="skill-group reveal">
       <div class="skill-group-icon">⚙️</div>
       <div class="skill-group-title">Languages</div>
-      <div class="skill-pills"><span class="skill-pill">Java 8</span><span class="skill-pill">Python</span><span class="skill-pill">C++</span><span class="skill-pill">ESQL</span><span class="skill-pill">JavaScript</span></div>
+      <div class="skill-pills"><span class="skill-pill">Java 8</span><span class="skill-pill">Python</span><span class="skill-pill">C++</span><span class="skill-pill">ESQL</span><span class="skill-pill">SQL</span></div>
     </div>
     <div class="skill-group reveal">
       <div class="skill-group-icon">🏗️</div>
       <div class="skill-group-title">Frameworks & Architecture</div>
-      <div class="skill-pills"><span class="skill-pill">Spring Boot</span><span class="skill-pill">Microservices</span><span class="skill-pill">REST APIs</span><span class="skill-pill">Spring</span><span class="skill-pill">Hibernate</span><span class="skill-pill">JDBC Template</span></div>
+      <div class="skill-pills"><span class="skill-pill">Spring Boot</span><span class="skill-pill">Microservices</span><span class="skill-pill">REST APIs</span><span class="skill-pill">Spring</span></div>
     </div>
     <div class="skill-group reveal">
       <div class="skill-group-icon">🚀</div>
       <div class="skill-group-title">Build & DevOps</div>
-      <div class="skill-pills"><span class="skill-pill">Maven</span><span class="skill-pill">Gradle</span><span class="skill-pill">Ant</span><span class="skill-pill">Jenkins</span><span class="skill-pill">Bamboo</span><span class="skill-pill">SonarQube</span><span class="skill-pill">CI/CD</span></div>
+      <div class="skill-pills"><span class="skill-pill">Maven</span><span class="skill-pill">Gradle</span><span class="skill-pill">Ant</span><span class="skill-pill">Jenkins</span><span class="skill-pill">SonarQube</span></div>
     </div>
     <div class="skill-group reveal">
       <div class="skill-group-icon">🗄️</div>
@@ -336,7 +336,7 @@ footer span{color:rgba(255,255,255,0.85);font-weight:600}
     <div class="skill-group reveal">
       <div class="skill-group-icon">🛠️</div>
       <div class="skill-group-title">Tools & IDEs</div>
-      <div class="skill-pills"><span class="skill-pill">GitHub</span><span class="skill-pill">Bitbucket</span><span class="skill-pill">JIRA</span><span class="skill-pill">IntelliJ IDEA</span><span class="skill-pill">Eclipse</span><span class="skill-pill">VS Code</span></div>
+      <div class="skill-pills"><span class="skill-pill">GitHub</span><span class="skill-pill">Bitbucket</span><span class="skill-pill">JIRA</span><span class="skill-pill">IntelliJ IDEA</span></div>
     </div>
   </div>
 </section>
@@ -350,9 +350,9 @@ footer span{color:rgba(255,255,255,0.85);font-weight:600}
     <p class="section-sub">Recognised for excellence in mentoring, innovation, and project impact.</p>
   </div>
   <div class="ach-grid">
-    <div class="ach-card reveal"><div class="ach-icon">🏆</div><div class="ach-title">Golden Guru Award</div><div class="ach-org">Tata Consultancy Services</div><div class="ach-desc">Awarded for extensive contributions in training and mentoring associates, serving as the Learning Development SPOC for the entire team.</div></div>
-    <div class="ach-card reveal"><div class="ach-icon">⭐</div><div class="ach-title">Contextual Master</div><div class="ach-org">Tata Consultancy Services</div><div class="ach-desc">Recognised for developing a batch application that automated key business processes, significantly improving operational efficiency.</div></div>
-    <div class="ach-card reveal"><div class="ach-icon">🎖️</div><div class="ach-title">GEMs & Fresco Miles Awards</div><div class="ach-org">Tata Consultancy Services</div><div class="ach-desc">Multiple awards for active participation in project initiatives, kickoffs, and hackathons across Tata Consultancy Services.</div></div>
+    <div class="ach-card reveal"><div class="ach-icon">🏆</div><div class="ach-title">Golden Guru Award</div><div class="ach-org">Tata Consultancy Services</div><div class="ach-desc">Awarded for exceptional mentoring and knowledge sharing within the organization.</div></div>
+    <div class="ach-card reveal"><div class="ach-icon">⭐</div><div class="ach-title">Contextual Master</div><div class="ach-org">Tata Consultancy Services</div><div class="ach-desc">Recognised for deep expertise and mastery in core technical domains.</div></div>
+    <div class="ach-card reveal"><div class="ach-icon">🎖️</div><div class="ach-title">GEMs & Fresco Miles Awards</div><div class="ach-org">Tata Consultancy Services</div><div class="ach-desc">Received multiple awards for outstanding project delivery and innovation.</div></div>
   </div>
 </section>
 
@@ -364,8 +364,8 @@ footer span{color:rgba(255,255,255,0.85);font-weight:600}
     <h2 class="section-title">Education</h2>
   </div>
   <div class="edu-grid">
-    <div class="edu-card reveal"><div class="edu-icon">🎓</div><div><div class="edu-degree">M.E. Industrial Engineering</div><div class="edu-school">College of Engineering Guindy, Chennai</div><div class="edu-year">Jul 2014 – Jun 2016</div></div></div>
-    <div class="edu-card reveal"><div class="edu-icon">📘</div><div><div class="edu-degree">B.E. Mechanical Engineering</div><div class="edu-school">PSVP Engineering College, Chennai</div><div class="edu-year">Jul 2010 – May 2014</div></div></div>
+    <div class="edu-card reveal"><div class="edu-icon">🎓</div><div><div class="edu-degree">M.E. Industrial Engineering</div><div class="edu-school">College of Engineering Guindy, Chennai</div><div class="edu-year">2016</div></div></div>
+    <div class="edu-card reveal"><div class="edu-icon">📘</div><div><div class="edu-degree">B.E. Mechanical Engineering</div><div class="edu-school">PSVP Engineering College, Chennai</div><div class="edu-year">2014</div></div></div>
   </div>
 </section>
 
@@ -380,16 +380,20 @@ footer span{color:rgba(255,255,255,0.85);font-weight:600}
     </div>
     <div class="contact-links">
       <a class="contact-link" href="tel:+919003176755">
-        <div class="clink-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c3bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.95 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.86 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="clink-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c3bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
         <div><div class="clink-text">+91 9003176755</div><div class="clink-sub">Phone / WhatsApp</div></div>
       </a>
       <a class="contact-link" href="mailto:vignesh.thirumaal99@gmail.com">
-        <div class="clink-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c3bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+        <div class="clink-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c3bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div>
         <div><div class="clink-text">vignesh.thirumaal99@gmail.com</div><div class="clink-sub">Email</div></div>
       </a>
       <a class="contact-link" href="https://linkedin.com/in/vigneshG" target="_blank">
-        <div class="clink-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c3bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></div>
+        <div class="clink-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c3bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg></div>
         <div><div class="clink-text">linkedin.com/in/vigneshG</div><div class="clink-sub">LinkedIn Profile</div></div>
+      </a>
+      <a class="contact-link" href="https://github.com/VigneshThiru9788" target="_blank">
+        <div class="clink-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c3bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0-2-1.5-3-1.5-3-1.5-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></div>
+        <div><div class="clink-text">github.com/VigneshThiru9788</div><div class="clink-sub">GitHub Profile</div></div>
       </a>
     </div>
   </div>
