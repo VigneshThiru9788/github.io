@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vignesh Govindraj — Senior Java Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#ffffff;
+  --text:#0f0a2e;
+  --muted:#6b6880;
+  --purple:#6c3bff;
+  --purple-light:#ede8ff;
+  --purple-mid:#c4b5fd;
+  --pink:#f0146a;
+  --pink-light:#ffe4f0;
+  --teal:#00b68c;
+  --teal-light:#d0f5ec;
+  --orange:#ff6b2b;
+  --orange-light:#ffe8de;
+  --blue:#1d6af5;
+  --blue-light:#e0eaff;
+  --yellow:#f5b800;
+  --yellow-light:#fff8db;
+  --border:#ede8ff;
+  --border2:#d4ccf5;
+}
+html{scroll-behavior:smooth}
+body{background:#fff;color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 5rem;
+  background:rgba(255,255,255,0.93);
+  backdrop-filter:blur(20px);
+  border-bottom:1.5px solid var(--border);
+}
+.nav-logo{
+  font-family:'Fraunces',serif;font-weight:700;font-size:1.3rem;
+  background:linear-gradient(135deg,var(--purple),var(--pink));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.875rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover{color:var(--purple)}
+
+.hero{
+  min-height:100vh;padding:9rem 5rem 5rem;
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#ffffff 0%,#f7f5ff 40%,#f0fdf9 100%);
+}
+.hero-blob1{position:absolute;top:-120px;right:-120px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(108,59,255,0.12) 0%,transparent 70%);pointer-events:none}
+.hero-blob2{position:absolute;bottom:-100px;left:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,182,140,0.1) 0%,transparent 70%);pointer-events:none}
+.hero-blob3{position:absolute;top:30%;left:40%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(240,20,106,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:1100px;width:100%;display:grid;grid-template-columns:1.1fr 0.9fr;gap:5rem;align-items:center;position:relative;z-index:1}
+
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--purple-light);border:1.5px solid var(--purple-mid);border-radius:100px;padding:7px 18px;font-size:0.78rem;font-weight:700;color:var(--purple);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:1.5rem;animation:fadeUp 0.6s ease both}
+.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)}}
+.hero-name{font-family:'Fraunces',serif;font-size:clamp(3rem,5.5vw,5rem);font-weight:700;line-height:1.0;letter-spacing:-0.02em;margin-bottom:0.75rem;animation:fadeUp 0.6s 0.1s ease both}
+.hero-name .accent{background:linear-gradient(135deg,var(--purple) 0%,var(--pink) 60%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-role{display:inline-flex;align-items:center;gap:10px;font-size:1.05rem;font-weight:600;color:var(--muted);margin-bottom:1.25rem;animation:fadeUp 0.6s 0.15s ease both;flex-wrap:wrap}
+.hero-role-dot{width:5px;height:5px;border-radius:50%;background:var(--pink);flex-shrink:0}
+.hero-desc{color:var(--muted);font-size:0.97rem;line-height:1.85;max-width:480px;animation:fadeUp 0.6s 0.2s ease both}
+.hero-cta{display:flex;gap:1rem;margin-top:2.25rem;flex-wrap:wrap;animation:fadeUp 0.6s 0.3s ease both}
+.btn-primary{background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;border:none;border-radius:12px;padding:13px 32px;font-family:inherit;font-size:0.9rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;box-shadow:0 8px 24px rgba(108,59,255,0.3);transition:transform 0.2s,box-shadow 0.2s}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(108,59,255,0.4)}
+.btn-outline{background:#fff;color:var(--purple);border:2px solid var(--purple-mid);border-radius:12px;padding:13px 32px;font-family:inherit;font-size:0.9rem;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s,border-color 0.2s,transform 0.2s}
+.btn-outline:hover{background:var(--purple-light);border-color:var(--purple);transform:translateY(-3px)}
+
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;animation:fadeUp 0.6s 0.4s ease both}
+.stat-card{border-radius:20px;padding:1.75rem 1.5rem;position:relative;overflow:hidden;border:1.5px solid transparent;transition:transform 0.3s,box-shadow 0.3s}
+.stat-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.08)}
+.stat-card:nth-child(1){background:var(--purple-light);border-color:var(--purple-mid)}
+.stat-card:nth-child(2){background:var(--teal-light);border-color:#86efda}
+.stat-card:nth-child(3){background:var(--pink-light);border-color:#fca5c8}
+.stat-card:nth-child(4){background:var(--orange-light);border-color:#ffbfa0}
+.stat-num{font-family:'Fraunces',serif;font-size:2.8rem;font-weight:700;line-height:1}
+.stat-card:nth-child(1) .stat-num{color:var(--purple)}
+.stat-card:nth-child(2) .stat-num{color:var(--teal)}
+.stat-card:nth-child(3) .stat-num{color:var(--pink)}
+.stat-card:nth-child(4) .stat-num{color:var(--orange)}
+.stat-label{font-size:0.8rem;font-weight:600;margin-top:6px;color:var(--muted)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+section{padding:6rem 5rem;max-width:1100px;margin:0 auto}
+.section-pill{display:inline-block;background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff;border-radius:100px;padding:5px 18px;font-size:0.72rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem}
+.section-title{font-family:'Fraunces',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;line-height:1.1;letter-spacing:-0.02em;margin-bottom:0.75rem}
+.section-sub{color:var(--muted);font-size:0.97rem;max-width:500px;line-height:1.85;margin-bottom:3rem}
+hr.divider{border:none;border-top:1.5px solid var(--border);max-width:1100px;margin:0 auto}
+
+.exp-item{display:grid;grid-template-columns:64px 1fr;gap:2rem;margin-bottom:2.5rem}
+.exp-dot-wrap{display:flex;flex-direction:column;align-items:center}
+.exp-dot{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;flex-shrink:0;font-size:0.72rem;font-weight:800;letter-spacing:0.05em}
+.exp-dot.tcs{background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff}
+.exp-dot.inf{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff}
+.exp-line{flex:1;width:2px;background:linear-gradient(to bottom,var(--border2),transparent);margin-top:8px}
+.exp-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:2rem;transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s}
+.exp-card:hover{border-color:var(--purple-mid);transform:translateY(-4px);box-shadow:0 12px 40px rgba(108,59,255,0.08)}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:0.5rem}
+.exp-role{font-weight:800;font-size:1.1rem;color:var(--text)}
+.exp-company{color:var(--purple);font-weight:700;font-size:0.9rem;margin-bottom:0.2rem}
+.exp-project-tag{display:inline-block;background:var(--teal-light);color:var(--teal);border-radius:6px;padding:3px 12px;font-size:0.75rem;font-weight:700;margin-bottom:1rem;margin-top:0.2rem}
+.exp-period{background:linear-gradient(135deg,var(--purple-light),var(--pink-light));border:1.5px solid var(--purple-mid);border-radius:100px;padding:5px 16px;font-size:0.78rem;font-weight:700;color:var(--purple);white-space:nowrap}
+.exp-bullets{list-style:none}
+.exp-bullets li{position:relative;padding-left:1.5rem;font-size:0.9rem;color:var(--muted);line-height:1.75;margin-bottom:0.5rem}
+.exp-bullets li::before{content:'▸';position:absolute;left:0;color:var(--purple);font-size:0.85rem;top:2px}
+.exp-stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.25rem;padding-top:1.25rem;border-top:1.5px dashed var(--border)}
+.tech-tag{background:var(--purple-light);border:1px solid var(--purple-mid);border-radius:8px;padding:4px 14px;font-size:0.78rem;font-weight:600;color:var(--purple);transition:background 0.2s,transform 0.15s,color 0.15s;cursor:default}
+.tech-tag:hover{background:var(--purple);color:#fff;transform:scale(1.05)}
+.tech-tag.teal{background:var(--teal-light);border-color:#86efda;color:var(--teal)}
+.tech-tag.teal:hover{background:var(--teal);color:#fff}
+.exp-sub{margin-top:1.5rem;padding-top:1.5rem;border-top:1.5px solid var(--border)}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.skill-group{border-radius:20px;padding:1.75rem;border:1.5px solid transparent;transition:transform 0.3s,box-shadow 0.3s}
+.skill-group:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,0.08)}
+.skill-group:nth-child(1){background:var(--purple-light);border-color:var(--purple-mid)}
+.skill-group:nth-child(2){background:var(--blue-light);border-color:#a5c3ff}
+.skill-group:nth-child(3){background:var(--teal-light);border-color:#86efda}
+.skill-group:nth-child(4){background:var(--orange-light);border-color:#ffbfa0}
+.skill-group:nth-child(5){background:var(--pink-light);border-color:#fca5c8}
+.skill-group:nth-child(6){background:var(--yellow-light);border-color:#fde68a}
+.skill-group-icon{font-size:1.75rem;margin-bottom:0.75rem}
+.skill-group-title{font-weight:800;font-size:0.95rem;margin-bottom:1rem;color:var(--text)}
+.skill-pills{display:flex;flex-wrap:wrap;gap:8px}
+.skill-pill{background:rgba(255,255,255,0.7);border-radius:8px;padding:5px 13px;font-size:0.8rem;font-weight:600;color:var(--text);border:1px solid rgba(0,0,0,0.06)}
+
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.ach-card{border-radius:20px;padding:2rem;border:1.5px solid transparent;transition:transform 0.3s,box-shadow 0.3s}
+.ach-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,0.1)}
+.ach-card:nth-child(1){background:linear-gradient(135deg,#fdf6ff,#f5e8ff);border-color:#e0c7ff}
+.ach-card:nth-child(2){background:linear-gradient(135deg,#f0fdf9,#d0f5ec);border-color:#86efda}
+.ach-card:nth-child(3){background:linear-gradient(135deg,#fff8db,#fef3c7);border-color:#fde68a}
+.ach-icon{font-size:2.2rem;margin-bottom:1rem}
+.ach-title{font-weight:800;font-size:1.1rem;margin-bottom:0.3rem;color:var(--text)}
+.ach-org{font-size:0.8rem;font-weight:700;margin-bottom:0.75rem}
+.ach-card:nth-child(1) .ach-org{color:var(--purple)}
+.ach-card:nth-child(2) .ach-org{color:var(--teal)}
+.ach-card:nth-child(3) .ach-org{color:#d97706}
+.ach-desc{font-size:0.88rem;color:var(--muted);line-height:1.75}
+
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.edu-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:2rem;display:flex;gap:1.25rem;align-items:flex-start;transition:border-color 0.3s,transform 0.3s}
+.edu-card:hover{border-color:var(--purple-mid);transform:translateY(-4px)}
+.edu-icon{width:52px;height:52px;border-radius:14px;flex-shrink:0;display:grid;place-items:center;font-size:1.5rem}
+.edu-card:nth-child(1) .edu-icon{background:var(--purple-light)}
+.edu-card:nth-child(2) .edu-icon{background:var(--blue-light)}
+.edu-degree{font-weight:800;font-size:1rem;margin-bottom:0.25rem}
+.edu-school{color:var(--purple);font-size:0.88rem;font-weight:600;margin-bottom:0.25rem}
+.edu-year{font-size:0.8rem;color:var(--muted);font-weight:500}
+
+.contact-wrapper{background:linear-gradient(135deg,var(--purple-light) 0%,var(--pink-light) 100%);border:1.5px solid var(--purple-mid);border-radius:28px;padding:3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.contact-lead{font-family:'Fraunces',serif;font-size:2rem;font-weight:700;line-height:1.2;margin-bottom:0.75rem}
+.contact-sub{color:var(--muted);font-size:0.95rem;line-height:1.8}
+.contact-links{display:flex;flex-direction:column;gap:1rem}
+.contact-link{display:flex;align-items:center;gap:1rem;background:#fff;border:1.5px solid var(--border2);border-radius:14px;padding:1rem 1.25rem;text-decoration:none;color:var(--text);transition:border-color 0.3s,transform 0.2s,box-shadow 0.3s}
+.contact-link:hover{border-color:var(--purple);transform:translateX(8px);box-shadow:0 6px 20px rgba(108,59,255,0.12)}
+.clink-icon{width:42px;height:42px;border-radius:12px;background:var(--purple-light);display:grid;place-items:center;flex-shrink:0}
+.clink-text{font-weight:700;font-size:0.9rem}
+.clink-sub{font-size:0.78rem;color:var(--muted)}
+
+footer{background:var(--text);color:rgba(255,255,255,0.5);text-align:center;padding:2rem 5rem;font-size:0.82rem}
+footer span{color:rgba(255,255,255,0.85);font-weight:600}
+
+.reveal{opacity:0;transform:translateY(36px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  section{padding:4rem 1.5rem}
+  .hero{padding:7rem 1.5rem 3rem}
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .contact-wrapper{grid-template-columns:1fr;padding:2rem}
+  .exp-item{grid-template-columns:52px 1fr;gap:1rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">VG.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="hero" id="about">
+  <div class="hero-blob1"></div>
+  <div class="hero-blob2"></div>
+  <div class="hero-blob3"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Open to opportunities</div>
+      <h1 class="hero-name">Vignesh<br><span class="accent">Govindraj</span></h1>
+      <div class="hero-role">
+        Senior Java Developer
+        <span class="hero-role-dot"></span>
+        Spring Boot
+        <span class="hero-role-dot"></span>
+        Microservices
+      </div>
+      <p class="hero-desc">9+ years building enterprise-grade backend systems in Banking & Trading. Specialising in microservices, RESTful APIs, and cloud integration for high-performance financial platforms.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+        <a href="#experience" class="btn-outline">View Experience</a>
+      </div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-num">9+</div><div class="stat-label">Years of Experience</div></div>
+      <div class="stat-card"><div class="stat-num">85%+</div><div class="stat-label">Code Coverage</div></div>
+      <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Top-Tier Employers</div></div>
+      <div class="stat-card"><div class="stat-num">3+</div><div class="stat-label">Awards Won</div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<section id="experience">
+  <div class="reveal">
+    <div class="section-pill">Career</div>
+    <h2 class="section-title">Work Experience</h2>
+    <p class="section-sub">A decade delivering scalable backend solutions across investment banking and enterprise systems.</p>
+  </div>
+
+  <div class="exp-item reveal">
+    <div class="exp-dot-wrap">
+      <div class="exp-dot tcs">TCS</div>
+      <div class="exp-line"></div>
+    </div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">IT Analyst — Senior Developer</div>
+          <div class="exp-company">Tata Consultancy Services, Chennai</div>
+          <div class="exp-project-tag">Investment Banking & Trade</div>
+        </div>
+        <span class="exp-period">Apr 2022 – Present</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Designed and developed RESTful APIs using Java and Spring Boot within a microservices architecture, enabling seamless integration between legacy systems and cloud-based services.</li>
+        <li>Built an integration layer connecting legacy banking systems with cloud applications, improving system interoperability and scalability at enterprise scale.</li>
+        <li>Implemented enterprise REST APIs to process trade and investor data from Oracle databases with optimised queries and efficient service design.</li>
+        <li>Developed a batch processing module that retrieves intraday trade details via stored procedures and publishes FIXML messages to IBM MQ for real-time third-party trading integration.</li>
+        <li>Achieved 85%+ code coverage with JUnit, Mockito, and PowerMockito; conducted code reviews and mentored junior developers as Learning Development SPOC.</li>
+      </ul>
+      <div class="exp-stack">
+        <span class="tech-tag">Java 8</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">REST APIs</span><span class="tech-tag">Microservices</span><span class="tech-tag">Maven</span><span class="tech-tag">Gradle</span><span class="tech-tag">JUnit</span><span class="tech-tag teal">IBM MQ</span><span class="tech-tag teal">Oracle</span><span class="tech-tag teal">AWS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item reveal">
+    <div class="exp-dot-wrap">
+      <div class="exp-dot inf">INF</div>
+    </div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <div class="exp-role">Associate Consultant</div>
+          <div class="exp-company">Infosys Limited, Chennai</div>
+          <div class="exp-project-tag">Corporate Accounts Handling in Bank</div>
+        </div>
+        <span class="exp-period">Jan 2017 – Mar 2022</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Developed frontend and backend enhancements for banking applications; performed POCs to evaluate technical solutions for new client requirements.</li>
+        <li>Implemented RESTful APIs using Java and Spring Boot, integrating business logic with database operations for CRUD functionalities and efficient data processing.</li>
+        <li>Implemented CI/CD pipelines using Jenkins and SonarQube, improving deployment efficiency across QA, CT, and Production environments.</li>
+        <li>Performed defect analysis and root cause identification, supporting pre-release and post-release activities for smooth production deployments.</li>
+      </ul>
+      <div class="exp-stack">
+        <span class="tech-tag">Java</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">REST APIs</span><span class="tech-tag">JavaScript</span><span class="tech-tag">HTML5</span><span class="tech-tag teal">Jenkins</span><span class="tech-tag teal">SonarQube</span><span class="tech-tag teal">Linux</span>
+      </div>
+      <div class="exp-sub">
+        <div class="exp-project-tag">Post Trading & Settlement</div>
+        <ul class="exp-bullets">
+          <li>Developed and enhanced middleware applications using WebSphere Message Broker, IBM MQ, and IBM Integration Bus to support banking trade processing systems.</li>
+          <li>Designed middleware solutions for new client integrations from scratch, enabling reliable message-based communication between enterprise systems.</li>
+          <li>Provided Unix production support, performing root cause analysis and resolution of critical production issues to ensure system stability.</li>
+        </ul>
+        <div class="exp-stack">
+          <span class="tech-tag">ESQL</span><span class="tech-tag">WebSphere MQ</span><span class="tech-tag">IIB</span><span class="tech-tag teal">Unix</span><span class="tech-tag teal">Bitbucket</span><span class="tech-tag teal">JIRA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="skills">
+  <div class="reveal">
+    <div class="section-pill">Expertise</div>
+    <h2 class="section-title">Technical Skills</h2>
+    <p class="section-sub">A broad toolkit built across enterprise Java development, integration, and DevOps practices.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">⚙️</div>
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-pills"><span class="skill-pill">Java 8</span><span class="skill-pill">Python</span><span class="skill-pill">C++</span><span class="skill-pill">ESQL</span><span class="skill-pill">JavaScript</span></div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">🏗️</div>
+      <div class="skill-group-title">Frameworks & Architecture</div>
+      <div class="skill-pills"><span class="skill-pill">Spring Boot</span><span class="skill-pill">Microservices</span><span class="skill-pill">REST APIs</span><span class="skill-pill">Spring</span><span class="skill-pill">Hibernate</span><span class="skill-pill">JDBC Template</span></div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">🚀</div>
+      <div class="skill-group-title">Build & DevOps</div>
+      <div class="skill-pills"><span class="skill-pill">Maven</span><span class="skill-pill">Gradle</span><span class="skill-pill">Ant</span><span class="skill-pill">Jenkins</span><span class="skill-pill">Bamboo</span><span class="skill-pill">SonarQube</span><span class="skill-pill">CI/CD</span></div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">🗄️</div>
+      <div class="skill-group-title">Databases & Servers</div>
+      <div class="skill-pills"><span class="skill-pill">Oracle</span><span class="skill-pill">IBM WebSphere</span><span class="skill-pill">Apache Tomcat</span><span class="skill-pill">IBM MQ</span></div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">🧪</div>
+      <div class="skill-group-title">Testing</div>
+      <div class="skill-pills"><span class="skill-pill">JUnit</span><span class="skill-pill">Mockito</span><span class="skill-pill">PowerMockito</span><span class="skill-pill">Postman</span></div>
+    </div>
+    <div class="skill-group reveal">
+      <div class="skill-group-icon">🛠️</div>
+      <div class="skill-group-title">Tools & IDEs</div>
+      <div class="skill-pills"><span class="skill-pill">GitHub</span><span class="skill-pill">Bitbucket</span><span class="skill-pill">JIRA</span><span class="skill-pill">IntelliJ IDEA</span><span class="skill-pill">Eclipse</span><span class="skill-pill">VS Code</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="achievements">
+  <div class="reveal">
+    <div class="section-pill">Recognition</div>
+    <h2 class="section-title">Achievements</h2>
+    <p class="section-sub">Recognised for excellence in mentoring, innovation, and project impact.</p>
+  </div>
+  <div class="ach-grid">
+    <div class="ach-card reveal"><div class="ach-icon">🏆</div><div class="ach-title">Golden Guru Award</div><div class="ach-org">Tata Consultancy Services</div><div class="ach-desc">Awarded for extensive contributions in training and mentoring associates, serving as the Learning Development SPOC for the entire team.</div></div>
+    <div class="ach-card reveal"><div class="ach-icon">⭐</div><div class="ach-title">Contextual Master</div><div class="ach-org">Tata Consultancy Services</div><div class="ach-desc">Recognised for developing a batch application that automated key business processes, significantly improving operational efficiency.</div></div>
+    <div class="ach-card reveal"><div class="ach-icon">🎖️</div><div class="ach-title">GEMs & Fresco Miles Awards</div><div class="ach-org">Tata Consultancy Services</div><div class="ach-desc">Multiple awards for active participation in project initiatives, kickoffs, and hackathons across Tata Consultancy Services.</div></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="education">
+  <div class="reveal">
+    <div class="section-pill">Academic Background</div>
+    <h2 class="section-title">Education</h2>
+  </div>
+  <div class="edu-grid">
+    <div class="edu-card reveal"><div class="edu-icon">🎓</div><div><div class="edu-degree">M.E. Industrial Engineering</div><div class="edu-school">College of Engineering Guindy, Chennai</div><div class="edu-year">Jul 2014 – Jun 2016</div></div></div>
+    <div class="edu-card reveal"><div class="edu-icon">📘</div><div><div class="edu-degree">B.E. Mechanical Engineering</div><div class="edu-school">PSVP Engineering College, Chennai</div><div class="edu-year">Jul 2010 – May 2014</div></div></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="contact">
+  <div class="contact-wrapper reveal">
+    <div>
+      <div class="section-pill">Get in Touch</div>
+      <div class="contact-lead">Let's build something great together</div>
+      <p class="contact-sub">Open to senior developer roles, architecture discussions, and consulting opportunities in Banking & FinTech domains. Based in Chennai, India.</p>
+    </div>
+    <div class="contact-links">
+      <a class="contact-link" href="tel:+919003176755">
+        <div class="clink-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c3bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.95 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.86 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div><div class="clink-text">+91 9003176755</div><div class="clink-sub">Phone / WhatsApp</div></div>
+      </a>
+      <a class="contact-link" href="mailto:vignesh.thirumaal99@gmail.com">
+        <div class="clink-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c3bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+        <div><div class="clink-text">vignesh.thirumaal99@gmail.com</div><div class="clink-sub">Email</div></div>
+      </a>
+      <a class="contact-link" href="https://linkedin.com/in/vigneshG" target="_blank">
+        <div class="clink-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6c3bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></div>
+        <div><div class="clink-text">linkedin.com/in/vigneshG</div><div class="clink-sub">LinkedIn Profile</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed for <span>Vignesh Govindraj</span> · Senior Java Developer · Chennai, India</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
